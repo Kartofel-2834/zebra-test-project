@@ -1,0 +1,113 @@
+:root {
+  --primary: red;
+
+  --shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/extrabold.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/bold-italic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/semibold-italic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/semibold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/medium-italic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/light-italic.ttf");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/light.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/extralight-italic.ttf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url("../fonts/Nunito-Sans/extralight.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+
+  font-family: NunitoSans;
+  font-style: normal;
+  font-weight: 400;
+}
+
+section {
+  max-width: 1710px;
+  margin: 0 auto;
+  padding: 2.5em 0;
+}
+
+h1 {
+  font-family: NunitoSans;
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: 700;
+  /* line-height: 120%; */
+  /*letter-spacing: -0.4px; */
+}
