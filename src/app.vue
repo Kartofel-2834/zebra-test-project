@@ -4,12 +4,15 @@
   <page-intro>
     <h1>Новости</h1>
   </page-intro>
+
+  <page-footer />
 </template>
 
 <script setup>
 // Components
 import PageHeader from "@/components/page-header.vue";
 import PageIntro from "./components/page-intro.vue";
+import PageFooter from "./components/page-footer.vue";
 </script>
 
 <style src="@/assets/css/index.css" />
