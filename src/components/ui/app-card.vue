@@ -5,10 +5,12 @@
     </div>
 
     <div class="card__content">
-      <slot />
+      <slot name="content" />
     </div>
 
-    <div class="card__border"></div>
+    <div class="card__border">
+      <slot name="static" />
+    </div>
   </div>
 </template>
 
@@ -47,11 +49,12 @@ defineProps({
 .card__border {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  padding: 2em;
 }
 
 .card__content {
   z-index: 10;
-  height: 166%;
+  height: calc(166% - 4em);
   background-color: white;
   border: 1px solid transparent;
   border-bottom: 0;
@@ -59,6 +62,8 @@ defineProps({
 }
 
 .card__border {
+  display: flex;
+  align-items: flex-end;
   z-index: 15;
   border: 1px solid var(--primary);
   border-top: 0;

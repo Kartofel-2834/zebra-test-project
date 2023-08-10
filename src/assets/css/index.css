@@ -1,6 +1,8 @@
 :root {
   --primary: #0c5bef;
   --secondary: #f0f6fe;
+  --text-faded: #a1a7b5;
+  --text-grey: #81899d;
 
   --shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.08);
 }
@@ -101,14 +103,52 @@
 section {
   max-width: 1710px;
   margin: 0 auto;
-  padding: 2.5em 0;
+  padding: 2.5em 2em;
 }
 
 h1 {
-  font-family: NunitoSans;
   font-size: 2.5em;
   font-style: normal;
   font-weight: 700;
   line-height: 48px;
   letter-spacing: -0.4px;
+}
+
+h2 {
+  color: var(--primary);
+  font-size: 1.375em;
+  line-height: 120%;
+}
+
+p {
+  font-size: 1.25em;
+  line-height: 130%;
+  letter-spacing: -0.2px;
+}
+
+button {
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  font-size: 1.25em;
+  font-weight: 700;
+  padding: 0.8em 1.6em;
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+button:active {
+  opacity: 0.7;
 }

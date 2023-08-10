@@ -22,4 +22,9 @@
 .footer__content > * {
   max-width: 7.125em;
 }
+
+.footer__content__mark {
+  color: var(--text-grey);
+  line-height: 140%;
+}
 </style>
