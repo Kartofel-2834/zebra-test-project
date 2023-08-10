@@ -1,7 +1,11 @@
 <template>
   <div class="intro">
     <div class="intro__background">
-      <img src="/intro.jpg" alt="intro" class="intro__background__img" />
+      <img
+        src="@/assets/img/intro.jpg"
+        alt="intro"
+        class="intro__background__img"
+      />
     </div>
 
     <section class="intro__content">

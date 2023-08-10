@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <section>
-      <img src="/logo.svg" alt="logo" class="header__logo" />
+      <img src="@/assets/icons/logo.svg" alt="logo" class="header__logo" />
     </section>
   </header>
 </template>

@@ -14,7 +14,7 @@
 import { defineProps } from "vue";
 
 defineProps({
-  src: { type: String, default: "/news-preview.png" },
+  src: { type: String, required: false },
 });
 </script>
 

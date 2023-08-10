@@ -35,7 +35,7 @@ import AppCard from "./ui/app-card.vue";
 import getMonthName from "@/utils/getMonthName";
 
 const props = defineProps({
-  preview: { type: String, default: "/news-preview.png" },
+  preview: { type: String, default: "" },
   date: { type: Date, default: new Date() },
   description: { type: String, required: false },
 });

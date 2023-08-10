@@ -1,7 +1,7 @@
 <template>
   <app-loading :active="isLoading">
     <section class="news">
-      <h3 v-if="!news?.length" class="news__row">Нет новостей</h3>
+      <h3 v-if="!isLoading && !news?.length" class="news__row">Нет новостей</h3>
 
       <template v-else>
         <page-news-card
