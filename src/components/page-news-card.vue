@@ -1,32 +1,34 @@
 <template>
   <app-card :src="preview" class="news__card">
-    <template #content>
-      <div class="news__card__date">
-        <span class="news__card__date__day">{{ day }}</span>
-        <span class="news__card__date__other">{{ month }} {{ year }}</span>
+    <div class="news__card__info">
+      <div class="news__card__info__date">
+        <span class="news__card__info__date__day">{{ day }}</span>
+        <span class="news__card__info__date__other">
+          {{ month }} {{ year }}
+        </span>
       </div>
 
-      <h2 class="news__card__title">
+      <h2 class="news__card__info__title">
         <slot name="title" />
       </h2>
 
-      <p class="news__card__description">
-        <slot name="description" />
-      </p>
-    </template>
+      <p
+        v-if="description"
+        class="news__card__info__description"
+        v-html="description"
+      />
+    </div>
 
-    <template #static>
-      <span class="news__card__tag">
-        <slot name="tag">Новости</slot>
-      </span>
-    </template>
+    <span class="news__card__tag">
+      <slot name="tag">Новости</slot>
+    </span>
   </app-card>
 </template>
 
 <script setup>
 import { defineProps, computed } from "vue";
 
-// Components
+// UI Components
 import AppCard from "./ui/app-card.vue";
 
 // Utils
@@ -35,6 +37,7 @@ import getMonthName from "@/utils/getMonthName";
 const props = defineProps({
   preview: { type: String, default: "/news-preview.png" },
   date: { type: Date, default: new Date() },
+  description: { type: String, required: false },
 });
 
 const year = computed(() => props.date.getFullYear());
@@ -50,10 +53,16 @@ const day = computed(() => {
 .news__card .card__content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.news__card__info {
+  display: flex;
+  flex-direction: column;
   gap: 1em;
 }
 
-.news__card__date {
+.news__card__info__date {
   display: grid;
   grid-template-columns: min-content min-content;
   grid-template-rows: 1fr;
@@ -62,20 +71,19 @@ const day = computed(() => {
   color: var(--text-faded);
 }
 
-.news__card__date__day {
+.news__card__info__date__day {
   font-size: 2.35em;
 }
 
-.news__card__date__other {
+.news__card__info__date__other {
   font-weight: 700;
   font-size: 0.9em;
   display: flex;
 }
 
 .news__card__tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 2.5em;
+  width: fit-content;
   padding: 0.25em 1em;
   background-color: var(--secondary);
   border-radius: 360px;

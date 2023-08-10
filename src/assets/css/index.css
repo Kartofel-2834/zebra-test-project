@@ -7,14 +7,18 @@
   --shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.08);
 }
 
-/* Fonts */
+/* Animations */
 
-@font-face {
-  font-family: NunitoSans;
-  src: url("../fonts/Nunito-Sans/extrabold.ttf");
-  font-weight: 900;
-  font-style: normal;
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
+/* Fonts */
 
 @font-face {
   font-family: NunitoSans;
@@ -25,30 +29,9 @@
 
 @font-face {
   font-family: NunitoSans;
-  src: url("../fonts/Nunito-Sans/bold-italic.ttf");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: NunitoSans;
-  src: url("../fonts/Nunito-Sans/semibold-italic.ttf");
-  font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: NunitoSans;
   src: url("../fonts/Nunito-Sans/semibold.ttf");
   font-weight: 600;
   font-style: normal;
-}
-
-@font-face {
-  font-family: NunitoSans;
-  src: url("../fonts/Nunito-Sans/medium-italic.ttf");
-  font-weight: 500;
-  font-style: italic;
 }
 
 @font-face {
@@ -67,22 +50,9 @@
 
 @font-face {
   font-family: NunitoSans;
-  src: url("../fonts/Nunito-Sans/light-italic.ttf");
-  font-weight: 200;
-  font-style: italic;
-}
-@font-face {
-  font-family: NunitoSans;
   src: url("../fonts/Nunito-Sans/light.ttf");
   font-weight: 200;
   font-style: normal;
-}
-
-@font-face {
-  font-family: NunitoSans;
-  src: url("../fonts/Nunito-Sans/extralight-italic.ttf");
-  font-weight: 100;
-  font-style: italic;
 }
 
 @font-face {
@@ -95,7 +65,7 @@
 * {
   margin: 0;
 
-  font-family: NunitoSans;
+  font-family: NunitoSans, sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -118,6 +88,13 @@ h2 {
   color: var(--primary);
   font-size: 1.375em;
   line-height: 120%;
+}
+
+h3 {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5em;
 }
 
 p {

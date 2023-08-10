@@ -1,15 +1,11 @@
 <template>
-  <div class="card">
-    <div class="card__preview">
+  <div class="card" :class="{ card_image: !!src }">
+    <div v-if="src" class="card__preview">
       <img :src="src" alt="card-preview" class="card__preview__img" />
     </div>
 
     <div class="card__content">
-      <slot name="content" />
-    </div>
-
-    <div class="card__border">
-      <slot name="static" />
+      <slot />
     </div>
   </div>
 </template>
@@ -26,14 +22,23 @@ defineProps({
 .card {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 4fr 6fr;
+  grid-template-rows: min-content auto;
   border-radius: 16px;
   cursor: pointer;
   overflow: hidden;
   transition: 0.2s ease-in-out;
 }
 
+.card:active {
+  opacity: 0.7;
+}
+
+.card:hover .card__preview {
+  transform: scale(1.1);
+}
+
 .card__preview {
+  max-height: 15em;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   max-width: 100%;
@@ -41,11 +46,13 @@ defineProps({
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #9ac9ec;
+  transition: 0.5s ease-in-out;
 }
 
 .card__preview__img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 .card__content {
@@ -53,11 +60,8 @@ defineProps({
   grid-row: 1 / 3;
   background-color: white;
   padding: 2em;
-  transform: translateY(40%);
-  border-radius: 0 0 16px 16px;
+  border-radius: 16px;
   border: 1px solid var(--primary);
-  border-top: 1px solid transparent;
-  border-bottom: none;
   transition: 0.2s ease-in-out;
 }
 
@@ -76,9 +80,10 @@ defineProps({
   z-index: 10;
 }
 
-.card:hover .card__content {
-  transform: translateY(0);
-  border-radius: 16px;
-  border-top: 1px solid var(--primary);
+/* With image */
+.card_image .card__content {
+  grid-row: 2 / 3;
+  border-radius: 0 0 16px 16px;
+  border-top: none;
 }
 </style>
