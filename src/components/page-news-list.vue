@@ -22,7 +22,7 @@ import PageNewsCard from "./page-news-card.vue";
 .news {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: auto;
+  grid-auto-rows: min-content;
   gap: 3em;
   padding-top: 4em;
   padding-bottom: 4.5em;
@@ -31,5 +31,25 @@ import PageNewsCard from "./page-news-card.vue";
 .news__loader {
   justify-self: center;
   grid-column: 1 / 4;
+}
+
+@media (max-width: 1300px) {
+  .news {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .news__loader {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width: 900px) {
+  .news {
+    grid-template-columns: 1fr;
+  }
+
+  .news__loader {
+    grid-column: 1 / 2;
+  }
 }
 </style>
