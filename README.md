@@ -1,24 +1,60 @@
-# zebra
+## Клонирование проекта
 
-## Project setup
+Первым делом откройте терминал на своем ПК и используйте одну из следующих комманд (Для запуска необходим git)
+
+```bash
+git clone https://github.com/Kartofel-2834/reactive-phone-test-project.git
+
+# или
+
+gh repo clone Kartofel-2834/reactive-phone-test-project.git
 ```
+
+## Установка зависимостей
+
+Перейдите в созданную папку проекта
+
+```bash
+cd reactive-phone
+```
+
+Установите все зависимости проекта одной из следующих комманд:
+
+```bash
+# npm
 npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
 ```
 
-### Compiles and hot-reloads for development
-```
+## Запуск сервера в режиме разработки (Development Server)
+
+С помощью одной из следующих команд запустите сервер для разработки на `http://localhost:8080`:
+
+```bash
+# npm
 npm run serve
+
+# pnpm
+pnpm run serve
+
+# yarn
+yarn serve
 ```
 
-### Compiles and minifies for production
-```
+## Сборка на прод
+
+```bash
+# npm
 npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+# pnpm
+pnpm run build
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# yarn
+yarn build
+```
