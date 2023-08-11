@@ -3,11 +3,11 @@
 Первым делом откройте терминал на своем ПК и используйте одну из следующих комманд (Для запуска необходим git)
 
 ```bash
-git clone https://github.com/Kartofel-2834/reactive-phone-test-project.git
+git clone https://github.com/Kartofel-2834/zebra-test-project.git
 
 # или
 
-gh repo clone Kartofel-2834/reactive-phone-test-project.git
+gh repo clone Kartofel-2834/zebra-test-project
 ```
 
 ## Установка зависимостей
@@ -15,7 +15,7 @@ gh repo clone Kartofel-2834/reactive-phone-test-project.git
 Перейдите в созданную папку проекта
 
 ```bash
-cd reactive-phone
+cd zebra-test-project
 ```
 
 Установите все зависимости проекта одной из следующих комманд:
